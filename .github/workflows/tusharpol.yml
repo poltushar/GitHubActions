@@ -1,0 +1,12 @@
+name: tushar
+on: push
+jobs:
+ testing_code:
+  runs-on: ubuntu-latest
+  steps:
+    - name: clone the code
+      run: echo "tushar"
+
+    - name: push the code
+      run: echo "push the code"
+           
