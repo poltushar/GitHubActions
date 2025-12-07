@@ -1,7 +1,7 @@
 name: demo
 on: [push]
 jobs:
-  test-job:
+ test-job:
   runs-on: ubuntu-latest  
   steps:
    - name: checkout code
