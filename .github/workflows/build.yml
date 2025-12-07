@@ -1,0 +1,22 @@
+name: build
+on :
+ push: 
+  branches: [main]
+jobs:
+ docker:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4 
+    - name: clone code
+      run: echo "clone the code"
+
+    - name: login 
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+    - name: build
+      run: echo "docker build -t ${{ secrets.DOCKER_USERNAME }}/jenkins-notes-app" 
+
+    - name: push
+      run: echo "docker push ${{ secrets.DOCKER_USERNAME }}/myapp"
+
+  
