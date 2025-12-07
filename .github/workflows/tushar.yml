@@ -22,8 +22,8 @@ jobs:
      - name: buld  message
        run: echo "demo"
   deploy-job:
-  runs-on: ubuntu-latest 
-   steps:
+    runs-on: ubuntu-latest 
+    steps:
      - name: deploy message
        run: echo "deploy-job"  
 
