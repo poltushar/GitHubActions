@@ -1,0 +1,21 @@
+name: Node.js Build
+on:
+ push: 
+  branches: [ main ]
+jobs:
+    test-job:
+     runs-on: ubuntu-latest 
+     steps: 
+     - name: Push job
+       uses: actions/checkout@v4
+
+     - name: Set up Node
+       uses: actions/setup-node@v4
+       with:
+          node-version: 18
+     - name: Install Dependencies
+       run: npm install
+
+     - name: Run Tests
+       run: npm test
+  
